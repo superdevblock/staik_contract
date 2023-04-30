@@ -1,0 +1,2567 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x2aB546e905113a88be9BD64f5aBD85dC6a0d64f9",
+    "txHash": "0x7a7144da31cca3fbb94f794e9646f0d6e05421846333aec768aa478dac681707"
+  },
+  "proxies": [
+    {
+      "address": "0x977405CeB99fE83e615BFf163F677D14134a3a79",
+      "txHash": "0xeec938abb0242575811c324619b42e48cf51c796b5749ec48dc3efe4af8aad0b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbFd82d19FC4C7f7920B53735ea06B15564588fCE",
+      "txHash": "0x6bc438705cc06f9e9fc89b5e0c35fcb95a0843ae30d6ded9be368d6f575a75a9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x68E821eEEd7e1DBbe6E6cADc798e30dF043E0Fa0",
+      "txHash": "0xa3bbe845f4eef7eee67f34f66038989eea13b8f35e96dcd03a793ba615eeb11a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2C9bA2E85b4432e4Dd0c7aDdaDDeAb73B530f1Fb",
+      "txHash": "0xdbd131e62a4931a0ffaa931149f305afeff8e59f855e1d576183f32b619efabc",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3A50BF8640568689121025Ab47939429c6c3Bb2f",
+      "txHash": "0x2aea2e1d7017c72be8196e2ff14f2e9df4078c2e7aa49e95e8476e9a159b72b1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD9078f6F4078B37CBAA81C96956e5C6231a62106",
+      "txHash": "0x0a337f1da8118c2dee6485bfe4764c6b829307799daf66d5611965285cd854be",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe429e6b2262997991A59579c2A5376C1c4794427",
+      "txHash": "0x20ae35d6442729335501ba4420e7f05763b825fd627117ab97693d1cfd725132",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x60A3608350595A5d79400940066b690afB16792c",
+      "txHash": "0x2829647328efaafe2a16fe276d95ab3197134c1b285f9fa1f7ab73c381938aa1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xa045cC65fdFc88F2327fA60ee63AFD7e2Ed3475A",
+      "txHash": "0x17e6c1f9ef95468f432e13eee9f77ce05c067920c1de75dad7e83be72997003a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2cEFFfef4872cea393512071052d5d0aa7E3c196",
+      "txHash": "0x577daa95cbaf39fbe4fe64128749beaf44d5b7e9fac6088c7b8771bd73c8c5b5",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x70aF7C9d865ef2eFa475e078ffE28439Ce144948",
+      "txHash": "0xda4741d54d838bbf735c7bd8b2cf7d6a96e686c7a64e5d50236ad2369091f52d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0d1A6433D768a43a67EbE42b90C6895e5a2E5c13",
+      "txHash": "0x73683a9d3027353a1bb5c8d63a5ede50ada438c26c6a1b2245a7a54ab77e18ce",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbd3F43BE5B6e834249A222a56377dc0f593d8028",
+      "txHash": "0x26eea5d45777946e8f37709eb33031cbfc800f421f0d0912762bc36e412ed899",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "b2a20a83ae505a5d271de2d792f908f9cb9c154c607ae43e58e020d45c44b95d": {
+      "address": "0x94940E068eb775066e2E4577572CBd96117221EC",
+      "txHash": "0x78311f1a63690853e2761649a78682c1cd0177f3233a2483af6e10fde68b93a7",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "6e5cbae22a8ad21e4b683d1d70d1980e1ec00aec0d5cf65a617a679e4548d686": {
+      "address": "0x7f6177f389efa7Dc394805961F740dDc6Bbe6dF8",
+      "txHash": "0x47179902ac37cdf6cce5f651a25c9c1a040a3a538663beac4783196aebabb496",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "5031765677955e8f4f52a396ffe589357dae6f2789a7909310e7ec3cd1e59d56": {
+      "address": "0x432b84ecA6Cd28bc681A95be871DBaaA56004D4F",
+      "txHash": "0xd230a399c453e8fe616b6aa7c460695392a02e2764bc4a1098a4229b3857c680",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "110ba9d2896cac4cae76b594676ab6a1de58f26a61579abfda8ef2cb3d345522": {
+      "address": "0x1F75826429930c6A11F631b51AE39fce3586F180",
+      "txHash": "0x0d0786ca2e31315a639d2c6e14eccea4222bfc9920263b37d79c6f78d2a06820",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "fdc5498a237d150316c19a67121850acfbf27a6c1288ed129fbe38dda189c57c": {
+      "address": "0xEE9546b4E990ed16CD1d38694b06aea81B3ef2Bd",
+      "txHash": "0xf386d44b424d32ddcea398acd7d46ac28d6ac28cd47e318e7c30e25077207590",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)2117",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)2117": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)790": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "be9af1e62e8365f40574322c28c002bf0233ee4fd681724f02008b7e8b61d94d": {
+      "address": "0xD451860b478B213247522bFa65145BA4eFBA2933",
+      "txHash": "0x0bba63fa39366d4ed029493d9ab5b46b62a0a30137a92ad15e7bc1f3a46e1599",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:37"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "90426aa3bc3ed27586b5c42afbb07f7153a712388cf56e99d4df1a974777f075": {
+      "address": "0x8839B68BC26b2C2BE7623F4A4bBCD621f436D89c",
+      "txHash": "0xd2d57d33a1fb0faf8fc21636c200509f3904d12be3ffae2522e5665deec6bcbe",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:33"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:37"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:41"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "4d88d7a05ba155c9685162d5ae93b4930ad7d0f0ea509e69b62d3d794f48ad37": {
+      "address": "0xCF1E021b801feF8d47DF319e93E19Ed741F61b65",
+      "txHash": "0x3b54027a647ac126d48f78ae1e228abbd82359ece3bb16ac4fdc32d6fa399615",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)750",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)1058",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "bnbPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:32"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:36"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "124",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)1058": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)750": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "8472eefea80018210a11eebce6ea63ab35074be69a68fa3476d7e1a8cdbaf3b4": {
+      "address": "0xCc266413c3799985D628Aa5D530DBa845C61BC98",
+      "txHash": "0x03feb3493c8f88fb7b3fb191d898f872184aba52ff05603ffddd27afa80818bf",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "staikAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:11"
+          },
+          {
+            "label": "usdtAddress",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:12"
+          },
+          {
+            "label": "busdAddress",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:13"
+          },
+          {
+            "label": "wbtcAddress",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:14"
+          },
+          {
+            "label": "wethAddress",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IERC20)790",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:15"
+          },
+          {
+            "label": "startTime",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:17"
+          },
+          {
+            "label": "endTime",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:18"
+          },
+          {
+            "label": "tokenPrice_USD",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:20"
+          },
+          {
+            "label": "bsc01Router",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_contract(IDEXRouter01)2121",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:22"
+          },
+          {
+            "label": "userPaid_BNB",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:24"
+          },
+          {
+            "label": "userPaid_BUSD",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:25"
+          },
+          {
+            "label": "userPaid_USDT",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:26"
+          },
+          {
+            "label": "userPaid_WETH",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:27"
+          },
+          {
+            "label": "userPaid_WBTC",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:28"
+          },
+          {
+            "label": "bnbPriceFeed",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:30"
+          },
+          {
+            "label": "ethPriceFeed",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:31"
+          },
+          {
+            "label": "btcPriceFeed",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:32"
+          },
+          {
+            "label": "wallet1",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:34"
+          },
+          {
+            "label": "wallet2",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:35"
+          },
+          {
+            "label": "wallet3",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_address",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:36"
+          },
+          {
+            "label": "fee1",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:38"
+          },
+          {
+            "label": "fee2",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:39"
+          },
+          {
+            "label": "fee3",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:40"
+          },
+          {
+            "label": "feeDenominator",
+            "offset": 0,
+            "slot": "124",
+            "type": "t_uint256",
+            "contract": "PresaleFactoryFee",
+            "src": "contracts\\PresaleFactoryFee.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IDEXRouter01)2121": {
+            "label": "contract IDEXRouter01",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20)790": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
