@@ -1,5 +1,15 @@
+/**
+ * Submitted for verification at "BSC" on 2023-04-23
+ */
+
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
+/**************************************
+ **************************************
+ Telegram: https://t.me/valuableblockchaintalent 
+ **************************************
+ **************************************
+*/
 
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
@@ -90,9 +100,21 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         uint256 tokenAmount = amountPrice / tokenPrice_USD;
         uint256 decimalTokenAmount = tokenAmount * 10 ** 18;
 
-        wethAddress.transferFrom(msg.sender, wallet1, _amountPrice * fee1 / feeDenominator);
-        wethAddress.transferFrom(msg.sender, wallet2, _amountPrice * fee2 / feeDenominator);
-        wethAddress.transferFrom(msg.sender, wallet3, _amountPrice * fee3 / feeDenominator);        
+        wethAddress.transferFrom(
+            msg.sender,
+            wallet1,
+            (_amountPrice * fee1) / feeDenominator
+        );
+        wethAddress.transferFrom(
+            msg.sender,
+            wallet2,
+            (_amountPrice * fee2) / feeDenominator
+        );
+        wethAddress.transferFrom(
+            msg.sender,
+            wallet3,
+            (_amountPrice * fee3) / feeDenominator
+        );
 
         // transfer staik token to user
         staikAddress.transfer(msg.sender, decimalTokenAmount);
@@ -137,16 +159,27 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         uint256 tokenAmount = _amountPrice / tokenPrice_USD;
         uint256 decimalTokenAmount = tokenAmount * 10 ** 18;
 
-        usdtAddress.transferFrom(msg.sender, wallet1, _amountPrice * fee1 / feeDenominator);
-        usdtAddress.transferFrom(msg.sender, wallet2, _amountPrice * fee2 / feeDenominator);
-        usdtAddress.transferFrom(msg.sender, wallet3, _amountPrice * fee3 / feeDenominator);
+        usdtAddress.transferFrom(
+            msg.sender,
+            wallet1,
+            (_amountPrice * fee1) / feeDenominator
+        );
+        usdtAddress.transferFrom(
+            msg.sender,
+            wallet2,
+            (_amountPrice * fee2) / feeDenominator
+        );
+        usdtAddress.transferFrom(
+            msg.sender,
+            wallet3,
+            (_amountPrice * fee3) / feeDenominator
+        );
         // transfer staik token to user
         staikAddress.transfer(msg.sender, decimalTokenAmount);
 
         // add USDT user bought
         userPaid_USDT[msg.sender] += _amountPrice;
 
-        
         emit Presale(address(this), msg.sender, decimalTokenAmount);
     }
 
@@ -160,16 +193,28 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         uint256 tokenAmount = _amountPrice / tokenPrice_USD;
         uint256 decimalTokenAmount = tokenAmount * 10 ** 18;
 
-        busdAddress.transferFrom(msg.sender, wallet1, _amountPrice * fee1 / feeDenominator);
-        busdAddress.transferFrom(msg.sender, wallet2, _amountPrice * fee2 / feeDenominator);
-        busdAddress.transferFrom(msg.sender, wallet3, _amountPrice * fee3 / feeDenominator);
+        busdAddress.transferFrom(
+            msg.sender,
+            wallet1,
+            (_amountPrice * fee1) / feeDenominator
+        );
+        busdAddress.transferFrom(
+            msg.sender,
+            wallet2,
+            (_amountPrice * fee2) / feeDenominator
+        );
+        busdAddress.transferFrom(
+            msg.sender,
+            wallet3,
+            (_amountPrice * fee3) / feeDenominator
+        );
 
         // transfer staik token to user
         staikAddress.transfer(msg.sender, decimalTokenAmount);
 
         // add USDT user bought
         userPaid_BUSD[msg.sender] += _amountPrice;
-        
+
         emit Presale(address(this), msg.sender, decimalTokenAmount);
     }
 
@@ -188,15 +233,26 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         uint256 tokenAmount = amountPrice / tokenPrice_USD;
         uint256 decimalTokenAmount = tokenAmount * 10 ** 18;
 
-        wbtcAddress.transferFrom(msg.sender, wallet1, _amountPrice * fee1 / feeDenominator);
-        wbtcAddress.transferFrom(msg.sender, wallet2, _amountPrice * fee2 / feeDenominator);
-        wbtcAddress.transferFrom(msg.sender, wallet3, _amountPrice * fee3 / feeDenominator);        
+        wbtcAddress.transferFrom(
+            msg.sender,
+            wallet1,
+            (_amountPrice * fee1) / feeDenominator
+        );
+        wbtcAddress.transferFrom(
+            msg.sender,
+            wallet2,
+            (_amountPrice * fee2) / feeDenominator
+        );
+        wbtcAddress.transferFrom(
+            msg.sender,
+            wallet3,
+            (_amountPrice * fee3) / feeDenominator
+        );
         // transfer staik token to user
         staikAddress.transfer(msg.sender, decimalTokenAmount);
 
         // add USDT user bought
         userPaid_WBTC[msg.sender] += _amountPrice;
-
 
         emit Presale(address(this), msg.sender, decimalTokenAmount);
     }

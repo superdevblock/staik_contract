@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at Etherscan.io on 2023-04-23
+ *Submitted for verification at "BSC" on 2023-04-23
  */
 
 // SPDX-License-Identifier: Unlicensed
@@ -7,10 +7,10 @@
 pragma solidity ^0.8.0;
 
 /**************************************
-***************************************
-Telegram: https://t.me/valuableblockchaintalent 
-***************************************
-***************************************
+ **************************************
+ Telegram: https://t.me/valuableblockchaintalent 
+ **************************************
+ **************************************
 */
 
 /**

