@@ -24,6 +24,7 @@ contract TokenStaking is ReentrancyGuard, Ownable {
     IERC20 public stakingToken;
     IERC20 public rewardToken;
     uint256 public lockDuration;
+    uint256 public lockLimitDuration;
     uint256 public totalStaked;
     uint256 public totalAccountCount;
     uint256 public dailyRewardRate;
@@ -40,6 +41,7 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         address _stakingToken,
         address _rewardToken,
         uint256 _lockDuration,
+        uint256 _lockLimitDuration,
         uint256 _dailyRewardRate
     ) {
         daySecond = 86400;
@@ -47,7 +49,8 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         stakingToken = IERC20(_stakingToken);
         rewardToken = IERC20(_rewardToken);
         lockDuration = _lockDuration * daySecond;
-        dailyRewardRate = _dailyRewardRate; // 150
+        lockLimitDuration = _lockLimitDuration * daySecond;
+        dailyRewardRate = _dailyRewardRate; // 120
 
         totalAccountCount = 0;
     }
@@ -147,6 +150,12 @@ contract TokenStaking is ReentrancyGuard, Ownable {
 
     function setlockDuration(uint256 _lockDuration) external onlyOwner {
         lockDuration = uint256(_lockDuration * daySecond);
+    }
+
+    function setlockLimitDuration(
+        uint256 _lockLimitDuration
+    ) external onlyOwner {
+        lockLimitDuration = uint256(_lockLimitDuration * daySecond);
     }
 
     function setDailyRewardRate(uint256 _dailyRewardRate) external onlyOwner {

@@ -1021,8 +1021,8 @@ contract STAIKToken is ERC20, Ownable {
     uint256 liquidityAmount = 0;
     uint256 maxTokenAmount = 15_000_000_000 * (10 ** 15);
 
-    uint256 purchasePercent = 10;
-    uint256 sellPercent = 5;
+    uint256 purchasePercent = 12;
+    uint256 sellPercent = 12;
 
     constructor() ERC20("STAIKToken", "Staik") {
         _createTotalSupply(owner(), TOTAL_SUPPLY);
