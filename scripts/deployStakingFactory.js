@@ -6,6 +6,7 @@ async function main() {
                                     "0xD1E1B33EC6229F6FDb9d282C580e84273aeaD970",
                                     365,
                                     270,
+                                    5,
                                     120);
 
   console.log("This is Staking contract address: ", staking.address);

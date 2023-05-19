@@ -28,6 +28,7 @@ contract TokenStaking is ReentrancyGuard, Ownable {
     uint256 public totalStaked;
     uint256 public totalAccountCount;
     uint256 public dailyRewardRate;
+    uint256 public unstakingLimitDuration;
     uint256 public daySecond;
 
     mapping(address => uint256) public stakedBalance;
@@ -42,6 +43,7 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         address _rewardToken,
         uint256 _lockDuration,
         uint256 _lockLimitDuration,
+        uint256 _unstakingLimitDuration,
         uint256 _dailyRewardRate
     ) {
         daySecond = 86400;
@@ -50,6 +52,7 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         rewardToken = IERC20(_rewardToken);
         lockDuration = _lockDuration * daySecond;
         lockLimitDuration = _lockLimitDuration * daySecond;
+        unstakingLimitDuration = _unstakingLimitDuration * daySecond;
         dailyRewardRate = _dailyRewardRate; // 120
 
         totalAccountCount = 0;
@@ -89,21 +92,23 @@ contract TokenStaking is ReentrancyGuard, Ownable {
     function UnstakingToken() external nonReentrant {
         require(
             stakedBalance[msg.sender] > 0,
-            "Staking: no balance to unstake"
+            "Unstaking: no balance to unstake"
+        );
+
+        require(
+            (block.timestamp >=
+                lastStakeTime[msg.sender].add(unstakingLimitDuration)),
+            "Unstaking: no unstake"
         );
 
         uint256 amount = stakedBalance[msg.sender];
         uint256 reward = calculateReward(msg.sender);
-        uint256 tax = 0;
 
         if (reward > 0) {
             rewardToken.safeTransfer(msg.sender, reward);
         }
 
-        if (block.timestamp <= lastStakeTime[msg.sender].add(lockDuration))
-            tax = amount.mul(30).div(100);
-
-        stakingToken.safeTransfer(msg.sender, amount.sub(tax));
+        stakingToken.safeTransfer(msg.sender, amount);
 
         totalAccountCount--;
         stakedBalance[msg.sender] = 0;
@@ -114,10 +119,22 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         emit Unstaked(msg.sender, amount);
     }
 
+    function getRealReward(address _user) internal view returns (uint256) {
+        uint256 timeElapsed = block.timestamp.sub(lastStakeTime[_user]);
+        timeElapsed = timeElapsed.div(daySecond);
+
+        uint256 reward = stakedBalance[_user]
+            .mul(dailyRewardRate)
+            .mul(timeElapsed)
+            .div(10 ** 4);
+
+        return reward;
+    }
+
     function getClaimToken(address _user) external {
-        // get and send reward
-        uint256 reward = calculateReward(_user);
-        uint256 realReward = reward.mul(70).div(100);
+        uint256 reward = getRealReward(_user);
+        uint256 realReward = reward.mul(90).div(100);
+
         if (realReward > 0) {
             rewardToken.safeTransfer(msg.sender, realReward);
             lastStakeTime[msg.sender] = block.timestamp;
@@ -125,19 +142,23 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         }
     }
 
+    function calculateReward(address _user) public view returns (uint256) {
+        uint256 timeElapsed = block.timestamp.sub(lastStakeTime[_user]);
+        timeElapsed = timeElapsed.div(daySecond);
+
+        uint256 reward = getRealReward(_user);
+
+        if (timeElapsed < lockLimitDuration)
+            reward = reward.mul(70).div(10 ** 2);
+        else if (timeElapsed >= lockLimitDuration && timeElapsed < lockDuration)
+            reward = reward.mul(90).div(10 ** 2);
+
+        return reward;
+    }
+
     function withDrawToken() external onlyOwner {
         uint256 balanceToken = stakingToken.balanceOf(address(this));
         stakingToken.transfer(msg.sender, balanceToken);
-    }
-
-    function calculateReward(address user) public view returns (uint256) {
-        uint256 timeElapsed = block.timestamp.sub(lastStakeTime[user]);
-        timeElapsed = timeElapsed.div(daySecond);
-        uint256 reward = stakedBalance[user]
-            .mul(dailyRewardRate)
-            .mul(timeElapsed)
-            .div(10 ** 4);
-        return reward;
     }
 
     function setAddressStakingToken(address _stakingToken) external onlyOwner {
@@ -158,6 +179,12 @@ contract TokenStaking is ReentrancyGuard, Ownable {
         lockLimitDuration = uint256(_lockLimitDuration * daySecond);
     }
 
+    function setUnstakingLimitDuration(
+        uint256 _unstakingLimitDuration
+    ) external onlyOwner {
+        unstakingLimitDuration = uint256(_unstakingLimitDuration * daySecond);
+    }
+
     function setDailyRewardRate(uint256 _dailyRewardRate) external onlyOwner {
         dailyRewardRate = _dailyRewardRate;
     }
@@ -167,7 +194,8 @@ contract TokenStaking is ReentrancyGuard, Ownable {
     }
 
     function showClaimToken(address _user) external view returns (uint256) {
-        return calculateReward(_user);
+        uint256 reward = getRealReward(_user);
+        return reward.mul(90).div(10 ** 2);
     }
 
     function getCurrentTime() external view returns (uint256) {

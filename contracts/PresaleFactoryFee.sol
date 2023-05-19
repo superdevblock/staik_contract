@@ -138,8 +138,8 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         // token amount user want to buy
         uint256 amountPrice = bnbPrice * msg.value;
 
-        uint256 tokenAmount = amountPrice / tokenPrice_USD ** 18;
-        uint256 decimalTokenAmount = tokenAmount;
+        uint256 tokenAmount = amountPrice / tokenPrice_USD;
+        uint256 decimalTokenAmount = tokenAmount * 10 ** 18;
 
         staikAddress.transfer(msg.sender, decimalTokenAmount);
 

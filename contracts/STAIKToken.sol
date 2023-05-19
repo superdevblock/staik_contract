@@ -1013,19 +1013,31 @@ contract STAIKToken is ERC20, Ownable {
     uint256 private constant TOTAL_SUPPLY = 3_000_000_000 * (10 ** 18);
 
     IUniswapV2Router02 public uniswapV2Router;
-    mapping(address => bool) public uniswapV2PairMap;
+    address public uniswapV2Pair;
+    mapping(address => bool) public isExemptFromMaxWallet;
 
     // tracking variable for the liquidity pool
-    uint256 private swapTokensAtAmount = 3_000_000 * (10 ** 18);
+    uint256 public swapTokensAtAmount = 3_000_000 * (10 ** 18);
     // liquidity amount
-    uint256 liquidityAmount = 0;
-    uint256 maxTokenAmount = 15_000_000_000 * (10 ** 15);
+    uint256 private maxTokenAmount = 15_000_000_000 * (10 ** 15);
 
     uint256 purchasePercent = 12;
     uint256 sellPercent = 12;
 
+    bool public inSwap = false;
+
+    modifier swapping() {
+        inSwap = true;
+        _;
+        inSwap = false;
+    }
+
+    event Burn(address account, uint256 amount);
+
     constructor() ERC20("STAIKToken", "Staik") {
         _createTotalSupply(owner(), TOTAL_SUPPLY);
+
+        isExemptFromMaxWallet[owner()] = true;
     }
 
     function _transfer(
@@ -1037,57 +1049,82 @@ contract STAIKToken is ERC20, Ownable {
         require(to != address(0), "ERC20: transfer to the zero address");
         require(amount > 0, "Transfer amount must be greater than zero");
 
-        uint256 tokenBalance = balanceOf(to);
+        uint256 tokenBalance = balanceOf(address(this));
 
-        if (to != owner()) {
-            require(
-                (tokenBalance + amount) < maxTokenAmount,
-                "Transfer amount exceeds the maxTxAmount."
-            );
-        }
+        if (!inSwap) {
+            uint256 tokenWalletBalance = balanceOf(to);
 
-        if (uniswapV2PairMap[from] == true) {
-            // purchase
-            uint256 fee = amount.mul(purchasePercent).div(100);
-            liquidityAmount += fee;
-            super._transfer(from, to, amount.sub(fee));
-        } else if (uniswapV2PairMap[to] == true) {
-            // Selling
-            uint256 fee = amount.mul(sellPercent).div(100);
-            liquidityAmount += fee;
-            super._transfer(from, to, amount.sub(fee));
+            if (!isExemptFromMaxWallet[to]) {
+                require(
+                    (tokenWalletBalance + amount) < maxTokenAmount,
+                    "Transfer amount exceeds the maxTxAmount."
+                );
+            }
+
+            if (uniswapV2Pair == from) {
+                // purchase
+                uint256 fee = amount.mul(purchasePercent).div(100);
+                super._transfer(from, address(this), fee);
+                super._transfer(from, to, amount.sub(fee));
+            } else if (uniswapV2Pair == to && from != owner()) {
+                // Selling
+                uint256 fee = amount.mul(sellPercent).div(100);
+                super._transfer(from, address(this), fee);
+                super._transfer(from, to, amount.sub(fee));
+            } else {
+                // add pool
+                if (tokenBalance > swapTokensAtAmount) {
+                    swapAndLiquify();
+                }
+
+                super._transfer(from, to, amount);
+            }
         } else {
             super._transfer(from, to, amount);
         }
-        // add pool
-        if (liquidityAmount >= swapTokensAtAmount) {
-            swapAndLiquify();
-        }
     }
 
-    function burn(address _account, uint256 amount) public onlyOwner {
+    function burn(address _account, uint256 amount) public {
         _burn(_account, amount);
+
+        emit Burn(_account, amount);
     }
 
-    function swapAndLiquify() internal {
-        uint256 half = liquidityAmount.div(2);
-        uint256 otherhalf = liquidityAmount.sub(half);
+    function swapAndLiquify() public swapping {
+        uint256 tokenBalance = balanceOf(address(this));
+
+        uint256 half = tokenBalance.div(2);
+        uint256 otherhalf = tokenBalance.sub(half);
 
         uint256 initialBalance = address(this).balance;
         // swap tokens for ETH
-        swapTokensForEth(otherhalf, address(this));
+        swapTokensForEth(otherhalf);
         // how much ETH did we just swap into?
         uint256 newBnbBalance = address(this).balance - initialBalance;
         // add liquidity to uniswap
         addLiquidity(half, newBnbBalance);
+    }
 
-        liquidityAmount = 0;
+    function swapTokensForEth(uint256 tokenAmount) private {
+        // generate the uniswap pair path of token -> weth
+        address[] memory path = new address[](2);
+        path[0] = address(this);
+        path[1] = uniswapV2Router.WETH();
+
+        _approve(address(this), address(uniswapV2Router), tokenAmount);
+        // make the swap
+        uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
+            tokenAmount,
+            0, // accept any amount of ETH
+            path,
+            address(this),
+            block.timestamp
+        );
     }
 
     function addLiquidity(uint256 tokenAmount, uint256 ethAmount) internal {
         // approve token transfer to cover all possible scenarios
         _approve(address(this), address(uniswapV2Router), tokenAmount);
-
         // add the liquidity
         uniswapV2Router.addLiquidityETH{value: ethAmount}(
             address(this),
@@ -1095,24 +1132,6 @@ contract STAIKToken is ERC20, Ownable {
             0, // slippage is unavoidable
             0, // slippage is unavoidable
             owner(),
-            block.timestamp
-        );
-    }
-
-    function swapTokensForEth(uint256 tokenAmount, address _to) internal {
-        // generate the uniswap pair path of token -> weth
-        address[] memory path = new address[](2);
-        path[0] = address(this);
-        path[1] = uniswapV2Router.WETH();
-
-        _approve(address(this), address(uniswapV2Router), tokenAmount);
-
-        // make the swap
-        uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
-            tokenAmount,
-            0, // accept any amount of ETH
-            path,
-            _to,
             block.timestamp
         );
     }
@@ -1125,18 +1144,21 @@ contract STAIKToken is ERC20, Ownable {
         sellPercent = percent;
     }
 
-    function setNewV2Router(address _newRouter) public onlyOwner {
+    function setNewV2RouterAndPair(address _newRouter) public onlyOwner {
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(_newRouter);
 
         uniswapV2Router = _uniswapV2Router;
+
+        uniswapV2Pair = IUniswapV2Factory(uniswapV2Router.factory()).createPair(
+            uniswapV2Router.WETH(),
+            address(this)
+        );
+
+        isExemptFromMaxWallet[uniswapV2Pair] = true;
     }
 
-    function setNewV2Pair(address _newPair, bool active) public onlyOwner {
-        uniswapV2PairMap[_newPair] = active;
-    }
-
-    function setLimitTokenAmount(uint256 tokenAmount) public onlyOwner {
-        swapTokensAtAmount = tokenAmount;
+    function setLimitTokenAmount(uint256 _tokenAmount) public onlyOwner {
+        swapTokensAtAmount = _tokenAmount;
     }
 
     function airdropToken(
@@ -1147,4 +1169,18 @@ contract STAIKToken is ERC20, Ownable {
             transfer(_recipients[i], _amount);
         }
     }
+
+    function excludeFromMaxWallet(
+        address[] calldata user,
+        bool set
+    ) external onlyOwner {
+        uint256 i;
+        for (i = 0; i < user.length; i++) {
+            if (isExemptFromMaxWallet[user[i]] != set) {
+                isExemptFromMaxWallet[user[i]] = set;
+            }
+        }
+    }
+
+    receive() external payable {}
 }
