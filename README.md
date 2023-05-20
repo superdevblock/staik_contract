@@ -10,7 +10,7 @@ npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deployStakingFactory.js --network bscTestnet
-npx hardhat verify --network bscTestnet --contract contracts/TokenStaking.sol:TokenStaking 0x87e8206BD8Ad60E5dE7894B5FF0044e51e75c246 "0xD1E1B33EC6229F6FDb9d282C580e84273aeaD970", "0xD1E1B33EC6229F6FDb9d282C580e84273aeaD970", 360, 150
+npx hardhat verify --network bscTestnet --contract contracts/TokenStaking.sol:TokenStaking 0x59d0b6EbEA5E3F3C2c247aD1deEe181bf2256189 "0x4e0f76fa1fc5430464dd8397e9e2d4eeb0a76cdb", "0x4e0f76fa1fc5430464dd8397e9e2d4eeb0a76cdb", 365, 270, 5, 120
 
 npx hardhat verify 0x5EA2dbc5Aec49E1474835890e5E4a5c501396662 --network bscTestnet
 

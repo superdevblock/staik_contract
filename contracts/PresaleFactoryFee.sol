@@ -78,7 +78,8 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         fee3 = 950;
         feeDenominator = 1000;
 
-        staikAddress = IERC20(0xD1E1B33EC6229F6FDb9d282C580e84273aeaD970);
+        staikAddress = IERC20(0x4e0F76Fa1Fc5430464Dd8397e9E2d4eeb0A76CDB);
+
         usdtAddress = IERC20(0x337610d27c682E347C9cD60BD4b3b107C9d34dDd);
         busdAddress = IERC20(0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7);
         wbtcAddress = IERC20(0x1f12b61a35ca147542001186DEA23e34eb4d7d95);
