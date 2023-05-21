@@ -2,8 +2,8 @@ const { ethers } = require("hardhat");
 
 async function main() {
   const contract = await ethers.getContractFactory("TokenStaking");
-  const staking = await contract.deploy("0x4e0f76fa1fc5430464dd8397e9e2d4eeb0a76cdb", 
-                                    "0x4e0f76fa1fc5430464dd8397e9e2d4eeb0a76cdb",
+  const staking = await contract.deploy("0x2dFee2792f4b4CC939F8274B60fEaaE756fA941E", 
+                                    "0x2dFee2792f4b4CC939F8274B60fEaaE756fA941E",
                                     365,
                                     270,
                                     5,

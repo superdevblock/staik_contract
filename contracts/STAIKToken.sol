@@ -1037,6 +1037,17 @@ contract STAIKToken is ERC20, Ownable {
     constructor() ERC20("STAIKToken", "Staik") {
         _createTotalSupply(owner(), TOTAL_SUPPLY);
 
+        uniswapV2Router = IUniswapV2Router02(
+            0x10ED43C718714eb63d5aA57B78B54704E256024E
+        );
+
+        uniswapV2Pair = IUniswapV2Factory(uniswapV2Router.factory()).createPair(
+            uniswapV2Router.WETH(),
+            address(this)
+        );
+
+        isExemptFromMaxWallet[uniswapV2Pair] = true;
+
         isExemptFromMaxWallet[owner()] = true;
     }
 

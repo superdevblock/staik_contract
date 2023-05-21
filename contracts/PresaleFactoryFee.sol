@@ -60,13 +60,13 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         tokenPrice_USD = 5 * 10 ** 16;
 
         bnbPriceFeed = AggregatorV3Interface(
-            0x2514895c72f50D8bd4B4F9b1110F0D6bD2c97526
+            0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE
         );
         ethPriceFeed = AggregatorV3Interface(
-            0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7
+            0x9ef1B8c0E4F7dc8bF5719Ea496883DC6401d5b2e
         );
         btcPriceFeed = AggregatorV3Interface(
-            0x5741306c21795FdCBb9b265Ea0255F499DFe515C
+            0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf
         );
 
         wallet1 = 0xCA1269CfAbA5469C7Bcfbd96c193c1E1A4425C8e;
@@ -78,12 +78,12 @@ contract PresaleFactoryFee is OwnableUpgradeable {
         fee3 = 950;
         feeDenominator = 1000;
 
-        staikAddress = IERC20(0x4e0F76Fa1Fc5430464Dd8397e9E2d4eeb0A76CDB);
+        staikAddress = IERC20(0x2dFee2792f4b4CC939F8274B60fEaaE756fA941E);
 
-        usdtAddress = IERC20(0x337610d27c682E347C9cD60BD4b3b107C9d34dDd);
-        busdAddress = IERC20(0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7);
-        wbtcAddress = IERC20(0x1f12b61a35ca147542001186DEA23e34eb4d7d95);
-        wethAddress = IERC20(0x1e33833a035069f42d68D1F53b341643De1C018D);
+        usdtAddress = IERC20(0x55d398326f99059fF775485246999027B3197955);
+        busdAddress = IERC20(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
+        wbtcAddress = IERC20(0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c);
+        wethAddress = IERC20(0x2170Ed0880ac9A755fd29B2688956BD959F933F8);
     }
 
     function buyTokensByWETH(uint256 _amountPrice) external {
